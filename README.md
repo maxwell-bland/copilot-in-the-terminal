@@ -27,9 +27,11 @@ vim.api.nvim_set_var('copilot_assume_mapped', true)
 In `~/.config/nvim/lua/core/plugins.lua`:
 ```
   ["Shougo/vimproc.vim"] = {},
-  ["Shougo/vimshell.vim"] = {},
+  ["Shougo/vimshell.vim"] = {}, 
   ["Shougo/unite.vim"] = {},
 ```
+
+Edit: or replace `Shougo/vimshell.vim` with [maxwell-bland/vimshell-copilot.vim](https://github.com/maxwell-bland/vimshell-copilot.vim) and skip step 5 below. (vimshell-copilot.vim also includes bash scripting ergonomic improvements.)
 
 4. Build vimproc! 
 
@@ -76,5 +78,6 @@ vimshell% cat /dev/urandom | od -N 1 -An -i | awk '{print $1 % 10 + 1}'
 ## Conclusion and a Warning
 
 Alright, my 1337 buddy. As you know, Copilot will start learning from the
-commands you have executed in the current session, and the output. Don't leak
-anything too secret, haha. Roko's Basilisk thanks you and sees all.
+commands you have executed in the current session, and the output. Don't 
+[leak](https://man.openbsd.org/arc4random.3#arc4random_uniform) anything 
+too secret, haha. Roko's Basilisk thanks you and sees all.
